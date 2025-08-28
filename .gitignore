@@ -1,2 +1,5 @@
 *.o
 *.exe
+*.log
+*.log.dmp
+html

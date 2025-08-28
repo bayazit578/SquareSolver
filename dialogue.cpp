@@ -1,8 +1,10 @@
 #include "dialogue.h"
-#include "solver.h"
 
 #include <TXLib.h>
 #include <stdio.h>
+
+#include "solver.h"
+#include "colors.h"
 
 void Correct_Input(int roots, double x1, double x2) {
     switch (roots) {
@@ -28,11 +30,7 @@ bool Incorrect_Input() {
     printf("Коэффициенты введены неправильно. "
             "Хотите ли вы попробовать снова? (y-да, n-нет)\n");
 
-    int ch = 0;
-    while((ch = getchar()) != '\n')
-        ;
-
-    ch = getchar();
+    int ch = getchar();
 
     if (ch == 'n')
         return false;

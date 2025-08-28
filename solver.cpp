@@ -23,13 +23,14 @@ int solution_square(double coeff_a, double coeff_b, double coeff_c,
 
     double dis = coeff_b*coeff_b - 4*coeff_a*coeff_c;
     if(dis < 0) {
-        *x1 = *x2 = NAN;
+        *x1 = 0;
+        *x2 = 0;
         return Quantity_Zero;
     }
     else {
         if (is_equal(dis, 0)) {
             *x1 = -coeff_b / (2*coeff_a);
-            *x2 = NAN;
+            *x2 = 0;
 
             return Quantity_One;
         }
@@ -55,11 +56,11 @@ int solution_linear(double coeff_b, double coeff_c,
         return Quantity_One;
     }
     else if (is_equal(coeff_b, 0) && is_equal(coeff_c, 0)) {
-        *x1 = NAN;
+        *x1 = 0;
         return Quantity_Infinity;
     }
     else {
-        *x1 = NAN;
+        *x1 = 0;
         return Quantity_Zero;
     }
 }

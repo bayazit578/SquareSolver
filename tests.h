@@ -1,6 +1,8 @@
 #ifndef TESTS_H
 #define TESTS_H
 
+#include <stdio.h>
+
 //------------------------------------------------------------
 //! Run all unit tests;
 //------------------------------------------------------------
@@ -12,7 +14,7 @@ void RunAll();
 //! @return Quantity of failed tests by square equation solver
 //!
 //------------------------------------------------------------
-int Run_KBADPATKA();
+int Run_KBADPATKA(FILE* test_data);
 
 //------------------------------------------------------------
 //! Run linear equation solver test;
@@ -20,7 +22,7 @@ int Run_KBADPATKA();
 //! @return Quantity of failed tests by linear equation solver
 //!
 //------------------------------------------------------------
-int Run_LNHENKA();
+int Run_LNHENKA(FILE* test_data);
 
 //------------------------------------------------------------
 //! Tests square equation solver
